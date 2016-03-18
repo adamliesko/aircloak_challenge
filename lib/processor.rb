@@ -4,7 +4,6 @@ require File.expand_path('../../lib/aggregator', __FILE__)
 require File.expand_path('../../lib/anonymizer', __FILE__)
 
 # Processor processes json input files and delegates the stats computation to other classes.
-
 class Processor
   def initialize(aggregator, anonymizer, path)
     @aggregator = aggregator
@@ -17,6 +16,7 @@ class Processor
       purchases = parse_user_purchases_file(json_file_name, type)
       @aggregator.add_purchases(purchases)
     end
+
     @anonymizer.anonymize_purchases(@aggregator.aggregated_purchases)
     @anonymizer.resulting_stats
   end

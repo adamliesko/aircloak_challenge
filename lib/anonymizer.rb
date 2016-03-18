@@ -1,7 +1,7 @@
 require File.expand_path('../../lib/stats_utils', __FILE__)
 
 # Anonymizer anonymizes the results using filtering function
-# It is then used to compute resulting stats - min, max, avg, mean
+# It is afterwards used to compute resulting stats - min, max, avg, mean through StatsUtils module
 class Anonymizer
   def initialize(&filter)
     @filter = filter
