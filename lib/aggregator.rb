@@ -1,7 +1,6 @@
 require File.expand_path('../../lib/purchase', __FILE__)
 
 # Aggregator aggregates purchases added by #add_purchases method on the fly
-
 class Aggregator
   attr_reader :aggregated_purchases
 

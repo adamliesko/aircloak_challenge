@@ -1,3 +1,4 @@
+# Helper module used for statistical computation during the anonymization of users' data
 module StatsUtils
   class << self
     def compute_avg_and_median(sorted_purchases, purchases_count)

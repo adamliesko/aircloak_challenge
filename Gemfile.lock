@@ -1,0 +1,14 @@
+GEM
+  specs:
+    clamp (1.0.0)
+    minitest (5.8.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  clamp (= 1.0.0)
+  minitest (= 5.8.3)
+
+BUNDLED WITH
+   1.11.2

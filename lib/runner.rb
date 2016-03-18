@@ -2,7 +2,6 @@ require File.expand_path('../../lib/processor', __FILE__)
 
 # Runner sets up Aggregator, Anonymizer (with anonymizing function) and Processor instances
 # Runs the processing in the path directory and filters purchases of a certain type
-
 module Runner
   def self.run(path, type, &anonymization_fnc)
     aggregator = Aggregator.new
@@ -19,4 +18,3 @@ module Runner
     end
   end
 end
-
