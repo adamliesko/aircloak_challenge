@@ -16,9 +16,12 @@ class Processor
       purchases = parse_user_purchases_file(json_file_name, type)
       @aggregator.add_purchases(purchases)
     end
-
-    @anonymizer.anonymize_purchases(@aggregator.aggregated_purchases)
-    @anonymizer.resulting_stats
+    if @aggregator.aggregated_purchases.empty?
+      puts("Unable to parse any purchase from '#{@path}' path.")
+    else
+      @anonymizer.anonymize_purchases(@aggregator.aggregated_purchases)
+      @anonymizer.resulting_stats
+    end
   end
 
   def self.unique_user_purchases_of_type(purchases, type)

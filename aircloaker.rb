@@ -12,7 +12,7 @@ Clamp do
   rescue ArgumentError => err
     res = "[E] #{err.class}: #{err.message}.\nPlease check your input parameters. Use -h flag to display help."
   ensure
-    puts(res)
+    puts(res) if res
   end
 
   def parse_anonymization_function

@@ -1,6 +1,7 @@
 # Helper module used for statistical computation during the anonymization of users' data
 module StatsUtils
   def self.compute_avg_and_median(sorted_purchases, purchases_count)
+    return [nil, nil] if purchases_count == 0 || sorted_purchases.empty?
     sum = 0
     median_array = []
 
