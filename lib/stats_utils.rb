@@ -28,5 +28,5 @@ module StatsUtils
     max = sorted_purchases.last[0].amount
 
     [min, max]
-end
+  end
 end

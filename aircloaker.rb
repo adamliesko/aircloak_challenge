@@ -10,7 +10,7 @@ Clamp do
   def execute
     res = Runner.run(input_dir, type, &parse_anonymization_function)
   rescue ArgumentError => err
-      res = "[E] #{err.class}: #{err.message}.\nPlease check your input parameters. Use -h flag to display help."
+    res = "[E] #{err.class}: #{err.message}.\nPlease check your input parameters. Use -h flag to display help."
   ensure
     puts(res)
   end
